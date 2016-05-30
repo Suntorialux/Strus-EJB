@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="com.epam.by.forms.LoginForm" />
+		<form-bean name="logoutForm" type="com.epam.by.forms.LogoutForm" />
+		<form-bean name="changeLocaleForm" type="com.epam.by.forms.LocaleForm" />
+	</form-beans>
+
+	<action-mappings>
+		<action path="/login"
+		 	name="loginForm" 
+			type="com.epam.by.actions.LoginAction"
+			input="/WEB-INF/views/login.jsp" 
+			scope="request"
+			validate="true">
+			<forward name="success" path="/datalex/reservation.do" />
+		</action>
+		<action path="/logout"
+				name="logoutForm" 
+				type="com.epam.by.actions.LogoutAction">
+			<forward name="success" path="/" redirect="true" />
+		</action>
+		<action path="/datalex/customer" type="com.epam.by.actions.CustomerAction">
+			<forward name="success" path="/WEB-INF/views/customer.jsp" />
+		</action>
+		<action path="/datalex/reservation" type="com.epam.by.actions.ReservationAction">
+			<forward name="success" path="/WEB-INF/views/reservation.jsp" />
+		</action>
+		<action path="/datalex/fareFamily" type="com.epam.by.actions.FareFamilyAction">
+			<forward name="success" path="/WEB-INF/views/fareFamily.jsp" />
+		</action>
+		<action path="/changeLocale" 
+				name="changeLocaleForm"
+				type="com.epam.by.actions.LocalAction"
+				input="/WEB-INF/views/login.jsp" >
+			<forward name="success" path="/"/>
+		</action>
+		
+	</action-mappings>
+
+	<message-resources parameter="com.epam.by.i18n.MessageBundle" />
+</struts-config>
