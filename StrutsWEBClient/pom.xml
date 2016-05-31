@@ -25,6 +25,7 @@
 			<artifactId>javaee-api</artifactId>
 			<version>7.0</version>
 		</dependency>
+		
 	</dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>

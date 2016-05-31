@@ -13,5 +13,14 @@
 			<session-type>Stateless</session-type>
 			<transaction-type>Bean</transaction-type>
 		</session>
+		<entity>
+			<ejb-name>BMPUser</ejb-name>
+			<home>com.epam.by.homeIfaces.UserHome</home>
+			<remote>com.epam.by.remoteIfaces.User</remote>
+			<ejb-class>com.epam.by.ejb.UserBean</ejb-class>
+			<persistence-type>Bean</persistence-type>
+			<prim-key-class>com.epam.by.ejb.UserPK</prim-key-class>
+			<reentrant>false</reentrant>
+		</entity>
 	</enterprise-beans>
 </ejb-jar>

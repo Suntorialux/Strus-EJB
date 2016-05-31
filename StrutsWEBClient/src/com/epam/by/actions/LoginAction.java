@@ -20,8 +20,7 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 
 import com.epam.by.forms.LoginForm;
-import com.epam.by.homeIfaces.AuthenticationHome;
-import com.epam.by.remoteIfaces.Authentication;
+import com.epam.by.homeIfaces.UserHome;
 
 /**
  * @author Andrei Yahorau
@@ -47,16 +46,22 @@ public class LoginAction extends Action {
 
 		Properties properties = new Properties();
 		properties.put(Context.INITIAL_CONTEXT_FACTORY, "org.jnp.interfaces.NamingContextFactory");
-		properties.put(Context.PROVIDER_URL, "localhost:1099");
+		properties.put(Context.PROVIDER_URL, "jnp://localhost:1099");
 
 		InitialContext jndiContext = new InitialContext(properties);
-		Object ref = jndiContext.lookup("Authentication");
+		/*
+		 * Object ref = jndiContext.lookup("Authentication");
+		 * 
+		 * AuthenticationHome home = (AuthenticationHome)
+		 * PortableRemoteObject.narrow(ref, AuthenticationHome.class);
+		 * 
+		 * Authentication authentication = home.create();
+		 */
 
-		AuthenticationHome home = (AuthenticationHome) PortableRemoteObject.narrow(ref, AuthenticationHome.class);
+		Object ref = jndiContext.lookup("BMPUser");
+		UserHome home = (UserHome) PortableRemoteObject.narrow(ref, UserHome.class);
 
-		Authentication authentication = home.create();
-
-		if (authentication.isUserExist(login, password)) {
+		if (home.isUserExist(login, password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", login);
 			forward = mapping.findForward("success");
