@@ -22,5 +22,13 @@
 			<prim-key-class>com.epam.by.ejb.UserPK</prim-key-class>
 			<reentrant>false</reentrant>
 		</entity>
+		<session>
+			<ejb-name>Reservation</ejb-name>
+			<home>com.epam.by.homeIfaces.ReservationHome</home>
+			<remote>com.epam.by.remoteIfaces.Reservation</remote>
+			<ejb-class>com.epam.by.ejb.ReservationBean</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
 	</enterprise-beans>
 </ejb-jar>
