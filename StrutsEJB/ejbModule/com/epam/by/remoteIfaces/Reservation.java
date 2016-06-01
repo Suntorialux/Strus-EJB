@@ -7,8 +7,7 @@ import java.rmi.RemoteException;
 
 import javax.ejb.EJBObject;
 
-import com.epam.by.ejb.ReservationBean.Customer;
-import com.epam.by.ejb.ReservationBean.FareFamily;
+import com.epam.by.ejb.ReservationPOJO;
 
 /**
  * @author Andrei Yahorau
@@ -16,7 +15,6 @@ import com.epam.by.ejb.ReservationBean.FareFamily;
  */
 public interface Reservation extends EJBObject {
 
-	public Customer getCustomer() throws RemoteException;
+	public ReservationPOJO getReservation(String fileName) throws RemoteException;
 
-	public FareFamily getFareFamily() throws RemoteException;
 }

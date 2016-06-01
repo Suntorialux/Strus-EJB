@@ -20,4 +20,10 @@
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>custom.tld</taglib-uri>
+			<taglib-location>/WEB-INF/custom.tld</taglib-location>
+		</taglib>
+	</jsp-config>
 </web-app>

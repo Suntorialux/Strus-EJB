@@ -25,7 +25,20 @@
 						<th><bean:message key="reservation.jsp.internalStatus" /></th>
 					</tr>
 				</thead>
-				
+				<tbody>
+					<datalex:reservation />
+					<logic:iterate name="reservation" property="resComponents"
+						id="resComp" indexId="index">
+						<tr>
+							<td><bean:write name="index" /></td>
+							<td><bean:write name="reservation" property="code" /></td>
+							<td><bean:write name="reservation" property="description" /></td>
+							<td><bean:write name="resComp" property="componentTypeCode" /></td>
+							<td><bean:write name="resComp" property="createDateTime" />
+							<td><bean:write name="resComp" property="internalStatus" /></td>
+						</tr>
+					</logic:iterate>
+				</tbody>
 			</table>
 		</div>
 		<jsp:include page="footer.jsp"></jsp:include>
