@@ -23,18 +23,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ReservationPOJO implements Serializable {
 
+	/** The code reservation */
 	@XmlAttribute(name = "Code")
 	private String code;
 
+	/** The description of reservation */
 	@XmlAttribute(name = "Description")
 	private String description;
 
+	/** The list of reservation components */
 	@XmlElement(name = "ResComponent")
 	private List<ResComponents> resComponents = new ArrayList<>();
 
+	/** The list of customers */
 	@XmlElement(name = "Customer")
 	private List<Customer> customers = new ArrayList<>();
 
+	/** The list of fare family */
 	@XmlElement(name = "FareFamily")
 	private List<FareFamily> fareFamilies = new ArrayList<>();
 
@@ -82,18 +87,22 @@ public class ReservationPOJO implements Serializable {
 
 		private static final long serialVersionUID = 1L;
 
+		/** The component of type code */
 		@XmlAttribute(name = "ComponentTypeCode")
 		private String componentTypeCode;
 
+		/** The date and time creating */
 		@XmlAttribute(name = "CreateDateTime")
 		private String createDateTime;
 
+		/** The internal status */
 		@XmlAttribute(name = "InternalStatus")
 		private InternalStatus internalStatus;
 
-		/**
-		 * 
-		 */
+		public static enum InternalStatus {
+			BOOKED, UNBOOKED, PENDING_BOOKING;
+		}
+
 		public ResComponents() {
 
 		}
@@ -152,12 +161,8 @@ public class ReservationPOJO implements Serializable {
 		@XmlElement(name = "Payment")
 		private List<Payment> payments = new ArrayList<>();
 
-		/**
-		 * 
-		 */
 		public Customer() {
-			super();
-			// TODO Auto-generated constructor stub
+
 		}
 
 		/**
@@ -201,15 +206,12 @@ public class ReservationPOJO implements Serializable {
 
 			private static final long serialVersionUID = 1L;
 
+			/** The email of customer */
 			@XmlAttribute(name = "EmailAddress")
 			private String emailAddress;
 
-			/**
-			 * 
-			 */
 			public Email() {
-				super();
-				// TODO Auto-generated constructor stub
+
 			}
 
 			/**
@@ -232,15 +234,12 @@ public class ReservationPOJO implements Serializable {
 
 			private static final long serialVersionUID = 1L;
 
+			/** The phone of customer */
 			@XmlAttribute(name = "PhoneNumber")
 			private String phoneNumber;
 
-			/**
-			 * 
-			 */
 			public Phone() {
-				super();
-				// TODO Auto-generated constructor stub
+
 			}
 
 			/**
@@ -250,11 +249,6 @@ public class ReservationPOJO implements Serializable {
 				return phoneNumber;
 			}
 
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see java.lang.Object#toString()
-			 */
 			@Override
 			public String toString() {
 				return phoneNumber;
@@ -280,12 +274,8 @@ public class ReservationPOJO implements Serializable {
 			@XmlAttribute(name = "CurrencyCode")
 			private String currencyCode;
 
-			/**
-			 * 
-			 */
 			public Payment() {
-				super();
-				// TODO Auto-generated constructor stub
+
 			}
 
 			/**
@@ -323,18 +313,16 @@ public class ReservationPOJO implements Serializable {
 
 		private static final long serialVersionUID = 1L;
 
+		/** The code of fare family */
 		@XmlAttribute(name = "FareFamilyCode")
 		private String fareFamilyCode;
 
+		/** The list of ancillaryAirComponent */
 		@XmlElement(name = "AncillaryAirComponent")
 		private List<AncillaryAirComponent> components = new ArrayList<>();
 
-		/**
-		 * 
-		 */
 		public FareFamily() {
-			super();
-			// TODO Auto-generated constructor stub
+
 		}
 
 		/**
@@ -363,15 +351,12 @@ public class ReservationPOJO implements Serializable {
 
 			private static final long serialVersionUID = 1L;
 
+			/** The ancillary Air Component */
 			@XmlAttribute(name = "AncillaryAirComponentCode")
 			private String ancillaryAirComponentCode;
 
-			/**
-			 * 
-			 */
 			public AncillaryAirComponent() {
-				super();
-				// TODO Auto-generated constructor stub
+
 			}
 
 			/**
@@ -381,11 +366,6 @@ public class ReservationPOJO implements Serializable {
 				return ancillaryAirComponentCode;
 			}
 
-			/*
-			 * (non-Javadoc)
-			 * 
-			 * @see java.lang.Object#toString()
-			 */
 			@Override
 			public String toString() {
 				return "AncillaryAirComponent [ancillaryAirComponentCode=" + ancillaryAirComponentCode + "]";
@@ -395,11 +375,6 @@ public class ReservationPOJO implements Serializable {
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString() {
 		return "ReservationPOJO [code=" + code + ", description=" + description + ", resComponents=" + resComponents + ", customers=" + customers + ", fareFamilies=" + fareFamilies + "]";

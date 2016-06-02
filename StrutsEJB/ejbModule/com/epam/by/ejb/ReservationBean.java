@@ -29,9 +29,7 @@ public class ReservationBean implements SessionBean {
 			jaxbContext = JAXBContext.newInstance(ReservationPOJO.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			reservation = (ReservationPOJO) jaxbUnmarshaller.unmarshal(file);
-			System.out.println("EJB " + reservation);
 		} catch (JAXBException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -39,30 +37,25 @@ public class ReservationBean implements SessionBean {
 	}
 
 	public void ejbCreate() {
-
 	}
 
 	@Override
 	public void ejbActivate() throws EJBException, RemoteException {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void ejbPassivate() throws EJBException, RemoteException {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void ejbRemove() throws EJBException, RemoteException {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void setSessionContext(SessionContext arg0) throws EJBException, RemoteException {
-		// TODO Auto-generated method stub
 
 	}
 

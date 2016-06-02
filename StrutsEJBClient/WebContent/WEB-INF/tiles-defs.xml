@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+"http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+<tiles-definitions>
+
+   <definition name="company-template" path="/WEB-INF/views/common-layout.jsp">
+	<put name="header" value="/WEB-INF/views/layouts/header.jsp" />
+	<put name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+   </definition>
+	</tiles-definitions>
+	
