@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Reservation>
+	<Customer id="1" FirstName="Alex" LastName="Smith" >
+		<Email EmailAddress="13883296608@139.com"/>
+        <Phone PhoneNumber="13883296608" />
+	</Customer>
+	<Customer id="2" FirstName="Alex" LastName="Smith" >
+		<Email EmailAddress="13883296608@139.com"/>
+        <Phone PhoneNumber="13883296608" />
+	</Customer>
+	<Customer id="3" FirstName="Alex" LastName="Smith" >
+		<Email EmailAddress="13883296608@139.com"/>
+        <Phone PhoneNumber="13883296608" />
+	</Customer>
+</Reservation>
