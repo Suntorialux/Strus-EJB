@@ -26,4 +26,20 @@
 			<taglib-location>/WEB-INF/custom.tld</taglib-location>
 		</taglib>
 	</jsp-config>
+	 <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.epam.by.filters.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/datalex/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LogoutFilter</filter-name>
+    <filter-class>com.epam.by.filters.LogoutFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LogoutFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

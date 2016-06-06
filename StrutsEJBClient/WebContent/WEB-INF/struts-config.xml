@@ -49,4 +49,6 @@
 		<set-property property="definitions-config"
 		value="/WEB-INF/tiles-defs.xml"/>
 	</plug-in>
+	
+	
 </struts-config>
