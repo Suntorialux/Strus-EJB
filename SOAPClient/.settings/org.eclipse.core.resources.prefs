@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/com/epam/by/service/AddCustomerArg0.java=UTF-8
+encoding//src/com/epam/by/service/AddCustomerArg0Email.java=UTF-8
+encoding//src/com/epam/by/service/AddCustomerArg0Phone.java=UTF-8
+encoding//src/com/epam/by/service/CustomerService.java=UTF-8
+encoding//src/com/epam/by/service/GetAllCustomersResponseReturnCustomer.java=UTF-8
+encoding//src/com/epam/by/service/GetAllCustomersResponseReturnCustomerEmail.java=UTF-8
+encoding//src/com/epam/by/service/GetAllCustomersResponseReturnCustomerPhone.java=UTF-8
+encoding//src/com/epam/by/service/GetCustomerByIdResponseReturn.java=UTF-8
+encoding//src/com/epam/by/service/GetCustomerByIdResponseReturnEmail.java=UTF-8
+encoding//src/com/epam/by/service/GetCustomerByIdResponseReturnPhone.java=UTF-8
+encoding//src/com/epam/by/service/UpdateCustomerArg0.java=UTF-8
+encoding//src/com/epam/by/service/UpdateCustomerArg0Email.java=UTF-8
+encoding//src/com/epam/by/service/UpdateCustomerArg0Phone.java=UTF-8
+encoding//src/com/epam/by/service/impl/CustomerServiceImplementationPortBindingStub.java=UTF-8
+encoding//src/com/epam/by/service/impl/CustomerServiceImplementationService.java=UTF-8
+encoding//src/com/epam/by/service/impl/CustomerServiceImplementationServiceLocator.java=UTF-8
