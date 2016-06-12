@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar id="ejb-jar_ID" version="2.1"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd">
+	<description>Datalex reservation</description>
+	<display-name>StrutsEJB</display-name>
+	<enterprise-beans>
+		<session>
+			<ejb-name>Authentication</ejb-name>
+			<home>com.epam.by.homeIfaces.AuthenticationHome</home>
+			<remote>com.epam.by.remoteIfaces.Authentication</remote>
+			<ejb-class>com.epam.by.ejb.AuthenticationImpl</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
+		<entity>
+			<ejb-name>BMPUser</ejb-name>
+			<home>com.epam.by.homeIfaces.UserHome</home>
+			<remote>com.epam.by.remoteIfaces.User</remote>
+			<ejb-class>com.epam.by.ejb.UserBean</ejb-class>
+			<persistence-type>Bean</persistence-type>
+			<prim-key-class>com.epam.by.entities.UserPK</prim-key-class>
+			<reentrant>false</reentrant>
+		</entity>
+		<session>
+			<ejb-name>Reservation</ejb-name>
+			<home>com.epam.by.homeIfaces.ReservationRetrieveHome</home>
+			<remote>com.epam.by.remoteIfaces.ReservationRetrieve</remote>
+			<ejb-class>com.epam.by.ejb.ReservationRetrieveImpl</ejb-class>
+			<session-type>Stateless</session-type>
+			<transaction-type>Bean</transaction-type>
+		</session>
+	</enterprise-beans>
+</ejb-jar>
